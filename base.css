@@ -1,0 +1,44 @@
+/* ==================================================
+   VARIÁVEIS DE CORES
+================================================== */
+:root {
+  --vermelho: #ff3b3b;
+  --amarelo: #ffcc00;
+  --verde: #00ff9c;
+
+  --bg: #f9f9f9;
+  --card: #ffffff;
+  --texto: #333;
+}
+
+/* ================= TEMA ESCURO ================= */
+body.dark {
+  --bg: #121212;
+  --card: #1e1e1e;
+  --texto: #f1f1f1;
+}
+
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ================= BASE ================= */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--texto);
+  transition: background-color 0.3s, color 0.3s;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

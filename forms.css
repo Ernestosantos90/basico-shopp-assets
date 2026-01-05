@@ -1,0 +1,164 @@
+/* ==================================================
+   FORMS — LOGIN / REGISTER / FORGOT
+================================================== */
+
+/* Container geral da página */
+.login-page {
+  min-height: calc(100vh - 120px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 16px;
+  background-color: var(--bg);
+}
+
+/* Caixa do formulário */
+.login-box {
+  width: 100%;
+  max-width: 900px;
+  background-color: var(--card);
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Título */
+.login-box h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+/* ================= FORM ================= */
+
+.login-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Grupo de campos (grid) */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+/* Grupo endereço */
+.form-grid.endereco {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+/* Labels */
+.login-box label {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Inputs */
+.login-box input {
+  width: 100%;
+  height: 36px;
+  padding: 0 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.login-box input:focus {
+  outline: none;
+  border-color: var(--amarelo);
+}
+
+/* Inputs que ocupam mais colunas */
+.col-2 {
+  grid-column: span 2;
+}
+.col-3 {
+  grid-column: span 3;
+}
+.col-4 {
+  grid-column: span 4;
+}
+.col-6 {
+  grid-column: span 6;
+}
+
+/* ================= SEÇÕES ================= */
+
+.form-section {
+  margin-top: 24px;
+}
+
+.form-section h3 {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+/* ================= CHECKBOX MAIORIDADE ================= */
+
+.checkbox-area {
+  display: flex;
+  align-items: center;
+  gap: 6px; /* aproxima checkbox do texto */
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.checkbox-area input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.checkbox-area label {
+  cursor: pointer; /* permite clicar no texto */
+  line-height: 1.4;
+}
+
+/* ================= BOTÃO ================= */
+
+.btn-login {
+  margin-top: 16px;
+  padding: 12px;
+  font-size: 15px;
+  background-color: var(--vermelho);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-login:hover {
+  opacity: 0.9;
+}
+
+/* ================= LINKS ================= */
+
+.login-ajuda {
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+.login-ajuda a {
+  color: var(--vermelho);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ================= RESPONSIVO ================= */
+
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .form-grid.endereco {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .col-3,
+  .col-4,
+  .col-6 {
+    grid-column: span 2;
+  }
+}

@@ -1,0 +1,88 @@
+/* ==================================================
+   RESPONSIVE — MOBILE FIRST
+   Centraliza TODAS as media queries
+================================================== */
+
+/* ================= TABLET ================= */
+@media (max-width: 1024px) {
+  .header-container {
+    padding: 8px 16px;
+  }
+
+  nav {
+    margin-left: 20px;
+  }
+
+  .todos-produtos .produtos-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .produto-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  /* HEADER */
+  nav {
+    display: none;
+  }
+
+  nav.ativo {
+    display: block;
+    position: absolute;
+    top: 56px;
+    right: 16px;
+    background-color: var(--card);
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .header-container {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  /* SLIDER */
+  .slider-track .card {
+    flex: 0 0 200px;
+    max-width: 200px;
+  }
+
+  /* GRID */
+  .todos-produtos .produtos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ================= MOBILE PEQUENO ================= */
+@media (max-width: 480px) {
+  .slider-track .card {
+    flex: 0 0 170px;
+    max-width: 170px;
+  }
+
+  .slider-btn {
+    width: 32px;
+    height: 32px;
+  }
+
+  .hero h2 {
+    font-size: 22px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+}
